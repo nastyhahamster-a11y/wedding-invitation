@@ -832,3 +832,128 @@ rotate(360deg);
     transform:rotate(180deg);
 
 }
+
+/* Календарь */
+
+.calendar-section {
+
+    padding:80px 20px;
+
+    background-image:url("images/background.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    min-height:400px;
+
+}
+
+
+.calendar {
+
+    max-width:380px;
+
+    margin:0 auto;
+
+    background:#fffaf4;
+
+    padding:35px;
+
+    border-radius:35px;
+
+    box-shadow:0 15px 40px rgba(100,70,40,0.12);
+
+}
+
+
+.calendar-title {
+
+    text-align:center;
+
+    font-size:26px;
+
+    letter-spacing:5px;
+
+    color:#654936;
+
+    margin-bottom:30px;
+
+}
+
+
+.calendar-week {
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    text-align:center;
+
+    font-size:13px;
+
+    color:#a78668;
+
+    margin-bottom:15px;
+
+}
+
+
+.calendar-days {
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    gap:12px;
+
+    text-align:center;
+
+}
+
+
+.calendar-days span {
+
+    height:35px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#654936;
+
+    position:relative;
+
+}
+
+
+.heart-date {
+
+    font-weight:bold;
+
+    z-index:1;
+
+}
+
+
+.heart-date::before {
+
+    content:"♡";
+
+    position:absolute;
+
+    font-size:55px;
+
+    color:#b08a6c;
+
+    z-index:-1;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+}
