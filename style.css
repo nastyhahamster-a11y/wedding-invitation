@@ -1,0 +1,834 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #f6efe6;
+    color: #5b4536;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.hero {
+
+    height: 100vh;
+    min-height: 700px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top:80px;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+   
+    background-image: url("images/background.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+    radial-gradient(
+        circle,
+        #ffffff 0,
+        transparent 40%
+    );
+
+    opacity: 0.5;
+
+}
+
+
+.content {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.small {
+
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    font-size: 18px;
+
+}
+
+
+h1 {
+
+    font-family: 'Marck Script', cursive;
+
+    font-size: 120px;
+    
+    font-weight: 400;
+
+    line-height:0.85;
+
+    margin: 0px;
+
+    color: #654936;
+    
+    z-index:5;
+
+    position: relative;
+
+    top: 50px;
+
+}
+
+
+.heart {
+
+    font-size: 40px;
+
+    color: #b18a6a;
+
+}
+
+
+.date {
+
+    font-size: 32px;
+
+    margin-top: 30px;
+
+}
+
+
+section {
+
+    padding: 80px 20px;
+
+}
+
+
+.invite {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+h2 {
+
+    font-size: 48px;
+
+    font-weight: 400;
+
+}
+
+
+.invite p {
+
+    font-size: 24px;
+
+    line-height: 1.6;
+
+}
+
+
+.timer {
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.35);
+
+}
+
+
+#countdown {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+
+#countdown div {
+
+    background: #fffaf4;
+
+    width: 130px;
+
+    height: 120px;
+
+    border-radius: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    box-shadow: 0 10px 30px rgba(90,60,40,0.1);
+
+}
+
+
+#countdown span {
+
+    font-size: 45px;
+
+}
+
+
+#countdown p {
+
+    margin: 0;
+
+}
+
+
+.program {
+
+    max-width: 700px;
+
+    margin: auto;
+
+}
+
+
+/* программа дня */
+
+
+.program {
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+
+
+.event {
+
+    position: relative;
+
+    background: transparent;
+
+    margin: 35px 0;
+
+    padding: 25px;
+
+    border-radius: 0;
+
+    border-bottom: 1px solid rgba(120,90,60,0.25);
+
+}
+
+
+
+.event:last-child {
+
+    border-bottom: none;
+
+}
+
+
+
+.event h3 {
+
+    font-size: 34px;
+
+    font-weight: 400;
+
+    color: #7a5c46;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.event p {
+
+    font-size: 24px;
+
+    color: #5b4536;
+
+    margin: 0;
+
+}
+
+
+.event h3 {
+
+    font-size: 35px;
+
+    margin: 0;
+
+}
+
+
+.event p {
+
+    font-size: 25px;
+
+}
+
+
+footer {
+
+    text-align: center;
+
+    padding: 60px;
+
+    font-size: 30px;
+
+    font-family: 'Marck Script', cursive;
+
+}
+
+
+
+/* телефон */
+
+@media(max-width:600px){
+
+
+h1 {
+
+    font-size: 65px;
+
+}
+
+
+h2 {
+
+    font-size: 36px;
+
+}
+
+
+.invite p {
+
+    font-size: 20px;
+
+}
+
+
+}
+/*  свадебный декор */
+
+/*  нежный свадебный декор */
+
+.decor {
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    z-index:2;
+
+    opacity:0.9;
+
+}
+
+
+
+
+
+.decor-left {
+
+    left:-40px;
+    top:70px;
+
+}
+
+
+
+.decor-right {
+
+    right:-40px;
+    bottom:70px;
+
+}
+
+
+
+
+.invite,
+.timer,
+.program {
+
+    animation: appear 1.2s ease;
+
+}
+
+
+
+.event {
+
+    transition: 0.3s;
+
+}
+
+
+.event:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+    0 15px 35px rgba(90,60,40,0.15);
+
+}
+
+
+
+@keyframes float {
+
+
+0% {
+
+transform: translateY(0);
+
+}
+
+
+50% {
+
+transform: translateY(-15px);
+
+}
+
+
+100% {
+
+transform: translateY(0);
+
+}
+
+
+}
+
+
+
+@keyframes appear {
+
+
+from {
+
+opacity:0;
+
+transform: translateY(30px);
+
+}
+
+
+to {
+
+opacity:1;
+
+transform: translateY(0);
+
+}
+
+
+}
+/* 🌹 цветочные уголки */
+
+
+.decor {
+
+    font-size: 120px;
+
+    filter: drop-shadow(
+        0 10px 10px rgba(80,50,30,0.15)
+    );
+
+}
+
+
+.decor-left {
+
+    animation: none;
+
+}
+
+
+
+
+
+/* нежная текстура фона */
+
+
+body {
+
+    background-color: #f4eadc;
+
+    background-image:
+    radial-gradient(
+        rgba(120,90,60,0.08) 1px,
+        transparent 1px
+    );
+
+    background-size: 18px 18px;
+
+}
+
+section {
+
+    animation:
+    show 1s ease forwards;
+
+}
+
+
+@keyframes show {
+
+from {
+
+opacity:0;
+
+transform: translateY(30px);
+
+}
+
+
+to {
+
+opacity:1;
+
+transform: translateY(0);
+
+}
+
+}
+
+
+@keyframes show {
+
+to {
+
+opacity:1;
+
+transform:
+translateY(0);
+
+}
+
+}
+
+/* 🌸 падающие лепестки */
+
+
+.petals {
+
+    position: fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:5;
+
+}
+
+
+.petals span {
+
+    position:absolute;
+
+    top:-50px;
+
+    font-size:25px;
+
+    animation:
+    fall 12s linear infinite;
+
+    opacity:0.7;
+
+}
+
+
+.petals span:nth-child(1){
+
+    left:10%;
+
+    animation-delay:0s;
+
+}
+
+
+
+.petals span:nth-child(2){
+
+    left:30%;
+
+    animation-delay:3s;
+
+}
+
+
+
+.petals span:nth-child(3){
+
+    left:55%;
+
+    animation-delay:6s;
+
+}
+
+
+
+.petals span:nth-child(4){
+
+    left:75%;
+
+    animation-delay:2s;
+
+}
+
+
+
+.petals span:nth-child(5){
+
+    left:90%;
+
+    animation-delay:8s;
+
+}
+
+
+
+@keyframes fall {
+
+
+0% {
+
+transform:
+translateY(0)
+rotate(0deg);
+
+}
+
+
+100% {
+
+transform:
+translateY(110vh)
+rotate(360deg);
+
+}
+
+
+}
+
+/* оформление первого экрана */
+
+
+.subtitle {
+
+    letter-spacing: 4px;
+
+    font-size: 40px;
+
+    color: #806552;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+.ampersand {
+
+    font-family: 'Marck Script', cursive;
+
+    font-size: 580px;
+
+    color:#cebdaf;
+
+    opacity:0.25;
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%, -50%);
+
+    z-index:1;
+
+    line-height:1;
+
+}
+
+
+
+.line {
+
+    width:120px;
+
+    height:1px;
+
+    background:#bda28a;
+
+    margin:30px auto;
+
+}
+
+
+
+.date {
+
+    letter-spacing:5px;
+
+    font-size:50px;
+
+    margin-top:100px;
+
+}
+
+.section-line {
+
+    color:#b18a6a;
+
+    font-size:22px;
+
+    margin:20px 0 40px;
+
+}
+
+/* подтверждение присутствия */
+
+
+.rsvp {
+
+    text-align:center;
+
+    padding:90px 20px;
+
+    background:
+    rgba(255,255,255,0.25);
+
+}
+
+
+
+.rsvp p {
+
+    font-size:22px;
+
+    max-width:600px;
+
+    margin:20px auto 40px;
+
+}
+
+
+
+.buttons {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.buttons button {
+
+    border:none;
+
+    padding:18px 35px;
+
+    border-radius:40px;
+
+    background:#806552;
+
+    color:white;
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+
+
+.buttons button:hover {
+
+    transform:translateY(-3px);
+
+    opacity:0.85;
+
+}
+
+.flower {
+
+    position:absolute;
+
+    width:480px;
+
+    z-index:2;
+
+}
+
+
+.flower-left {
+
+    left:-40px;
+
+    top:-20px;
+
+}
+
+
+
+.flower-right {
+
+    right:-40px;
+
+    bottom:-20px;
+
+    transform:rotate(180deg);
+
+}
