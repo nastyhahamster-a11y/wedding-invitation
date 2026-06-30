@@ -60,3 +60,23 @@ window.open(
 );
 
 }
+
+function setPlace(place) {
+
+    const map = document.getElementById("mapFrame");
+
+    const buttons = document.querySelectorAll(".map-buttons button");
+
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    if (place === "zags") {
+        map.src = "https://yandex.ru/map-widget/v1/?ll=40.134759%2C48.042818&z=16&pt=40.134759%2C48.042818%2Cpm2rdm";
+        buttons[0].classList.add("active");
+    }
+
+    if (place === "cafe") {
+        map.src = "https://yandex.ru/map-widget/v1/?ll=40.122731%2C48.015233&z=16&pt=40.122731%2C48.015233%2Cpm2rdm";
+        buttons[1].classList.add("active");
+    }
+
+}
